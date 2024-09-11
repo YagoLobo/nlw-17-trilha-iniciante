@@ -43,4 +43,15 @@ Operadores de concatenizacao
 
 ## Condicionais
 
--switch
+- switch
+
+## Modulos em node.js
+
+- Importacao de modulos (require, CommonJS)
+
+Biblioteca 'inquirer' para criar prompts interativos
+
+## Programacao assincrona e Promises:
+
+- Uso de funcoes assincronas (async/await)
+- 
