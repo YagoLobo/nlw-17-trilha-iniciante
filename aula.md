@@ -21,37 +21,53 @@ Como um lego, voce ira utilizar peças para criar algoritmos, ou seja, para reso
 - Apresentar od dados
 
 ## Escopo e variáveis:
-- Váriaveis globais e locais
+- [x]Váriaveis globais e locais
 
-- Constantes
+- [x]Constantes
 
 ## Tipos de dados
-- Strings(textos): "" '' ``
+- [x]Strings(textos): "" '' ``
 
-- Number: 2, 1.4, 3
+- [x]Number: 2, 1.4, 3
 
-- Function
+- [x]Function
 
 ## Operadores
-- Operadores de atribuição de valor: "="
-- Operadores de concatenizacao: "+"
-- Operadores de comparacao: "==" , "!=" , "<" , ">" , "<=" , "=>"
+- [x]Operadores de atribuição de valor: "="
+- [x]Operadores de concatenizacao: "+"
+- [x]Operadores de comparacao: "==" , "!=" , "<" , ">" , "<=" , "=>"
+
+## Estruturas de dados:
+
+## Arrays
+- [x] Uma lista que contem qualquer tipo de dado
+- [x] Metodos de array: push, find, forEach
+
+## Objetos
+- [x] Atributos e metodos
+- [x] Criacao e manipulacao de objetos
+- [x] Acesso a propriedades de objetos
+
+## Functions 
+- [x] criar, passar argumento
+- [x] executar
+- [x] arrow function / named function
 
 ## Estrutura de repeticao
 
-- while 
+- [x]while 
 
 ## Condicionais
 
-- switch
-- if/else
+- [x]switch
+- [x]if/else
 
 ## Modulos em node.js
 
-- Importacao de modulos (require, CommonJS)
+- [x]Importacao de modulos (require, CommonJS)
 
 Biblioteca 'inquirer' para criar prompts interativos
 
 ## Programacao assincrona e Promises:
 
-- Uso de funcoes assincronas (async/await)
+- [x]Uso de funcoes assincronas (async/await)
