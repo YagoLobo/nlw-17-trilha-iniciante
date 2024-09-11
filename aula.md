@@ -38,3 +38,9 @@ Operadores de atribuição de valor
 Operadores de concatenizacao
 
 ## Estrutura de repeticao
+
+- while 
+
+## Condicionais
+
+-switch
