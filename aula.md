@@ -34,3 +34,5 @@ Function
 
 ## Operadores
 Operadores de atribuição de valor
+
+Operadores de concatenizacao
