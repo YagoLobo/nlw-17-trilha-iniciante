@@ -36,3 +36,5 @@ Function
 Operadores de atribuição de valor
 
 Operadores de concatenizacao
+
+## Estrutura de repeticao
