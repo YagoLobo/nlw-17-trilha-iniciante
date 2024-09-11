@@ -44,7 +44,7 @@ const listarMetas = async () => {
     console.log('Meta(s) marcada(s) como concluida(s)')
 }
 
-const metasRealizadas = async ()=>{
+const metasRealizadas = async () => {
     const realizadas = metas.filter((meta) => {
         return meta.checked
     })
@@ -54,8 +54,24 @@ const metasRealizadas = async ()=>{
     }
 
     await select({
-        message: "Metas realilzadas",
+        message: "Metas realilzadas " + realizadas.length,
         choices:[...realizadas]
+    })
+}
+
+const metasAbertas = async () =>{
+    const abertas = metas.filter((meta)=>{
+        return meta.checked != true
+    })
+
+    if(abertas.length == 0){
+        console.log("Nao existem metas abertas :)")
+        return
+    }
+
+    await select({
+        message:"Metas Abertas " + abertas.length,
+        choices:[...abertas]
     })
 }
 
@@ -78,6 +94,10 @@ async function start() {
                     value: "realizadas"
                 },
                 {
+                    name: "Metas Abertas",
+                    value: "abertas"
+                },
+                {
                     name: "Sair",
                     value: "sair"
                 }
@@ -94,6 +114,9 @@ async function start() {
                 break
             case "realizadas":
                 await metasRealizadas()
+                break
+            case "abertas":
+                await metasAbertas()
                 break
             case "sair":
                 console.log("Ate a proxima")
