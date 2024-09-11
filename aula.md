@@ -21,21 +21,21 @@ Como um lego, voce ira utilizar peças para criar algoritmos, ou seja, para reso
 - Apresentar od dados
 
 ## Escopo e variáveis:
-Váriaveis globais e locais
+- Váriaveis globais e locais
 
-Constantes
+- Constantes
 
 ## Tipos de dados
-Strings(textos): "" '' ``
+- Strings(textos): "" '' ``
 
-Number: 2, 1.4, 3
+- Number: 2, 1.4, 3
 
-Function
+- Function
 
 ## Operadores
-Operadores de atribuição de valor
-
-Operadores de concatenizacao
+- Operadores de atribuição de valor: "="
+- Operadores de concatenizacao: "+"
+- Operadores de comparacao: "==" , "!=" , "<" , ">" , "<=" , "=>"
 
 ## Estrutura de repeticao
 
@@ -44,6 +44,7 @@ Operadores de concatenizacao
 ## Condicionais
 
 - switch
+- if/else
 
 ## Modulos em node.js
 
@@ -54,4 +55,3 @@ Biblioteca 'inquirer' para criar prompts interativos
 ## Programacao assincrona e Promises:
 
 - Uso de funcoes assincronas (async/await)
-- 
