@@ -1,13 +1,24 @@
 const { select, input , checkbox} = require('@inquirer/prompts')
+const { readFile } = require('fs')
+const fs = require("fs").promises
 
 let mensagem = "Bem vindo ao app de Metas"
-let meta = {
-    value: "Tomar 3L de agua todo dia",
-    checked: false,
+
+let metas 
+
+const carregarMetas = async () =>{
+    try{
+        const dados =  await fs.readFile("metas.json", "utf-8")
+        metas = JSON.parse(dados)
+    }
+    catch(erro) {
+        metas = []
+    }
 }
 
-let metas = [ meta ]
-
+const salvarMetas = async () => {
+    await fs.writeFile("metas.json", JSON.stringify(metas, null, 2))
+}
 
 const cadastrarMeta = async () => {
     const meta = await input({message: "Digite a meta:"})
@@ -53,6 +64,11 @@ const listarMetas = async () => {
 }
 
 const metasRealizadas = async () => {
+    if(metas.length == 0){
+        mensagem = "Nenhuma meta cadastrada :("
+        return
+    }
+
     const realizadas = metas.filter((meta) => {
         return meta.checked
     })
@@ -68,6 +84,11 @@ const metasRealizadas = async () => {
 }
 
 const metasAbertas = async () => {
+    if(metas.length == 0){
+        mensagem = "Nenhuma meta cadastrada :("
+        return
+    }
+
     const abertas = metas.filter((meta)=>{
         return meta.checked != true
     })
@@ -84,6 +105,11 @@ const metasAbertas = async () => {
 }
 
 const deletarMetas = async () => {
+    if(metas.length == 0){
+        mensagem = "Nenhuma meta cadastrada :("
+        return
+    }
+    
     const metasDesmarcadas = metas.map((meta)=>{
         return {value: meta.value, checked: false}
     })
@@ -116,7 +142,10 @@ const mostrarMensagem = () => {
 }
 
 async function start() {
+    await carregarMetas()
+
     while(true){
+        await salvarMetas()
         mostrarMensagem()
 
         const opcao = await select({
